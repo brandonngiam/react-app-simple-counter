@@ -1,26 +1,22 @@
 import React from "react";
-import logo from "../assets/logo.svg";
+import Counter from "./Counter";
 import "../styles/App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const counters = [
+    { id: "123", initialCount: 0 },
+    { id: "124", initialCount: 1 },
+    { id: "125", initialCount: 2 },
+    { id: "126", initialCount: 3 }
+  ];
+
+  //creates a list of React elements/components
+  const counterItems = counters.map(x => {
+    return <Counter key={x.id} initial={x.initialCount} />;
+  });
+
+  return <React.Fragment>{counterItems}</React.Fragment>;
 }
 
+// const element = <Counter />;
 export default App;

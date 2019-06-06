@@ -1,0 +1,12 @@
+.negative {
+  background-color: red;
+}
+
+.button {
+  background-color: lightgray;
+  border: 0;
+  font-size: 2em;
+  width: 150px;
+  height: 60px;
+  margin: 0.5rem 2rem 0.5rem 2rem;
+}
